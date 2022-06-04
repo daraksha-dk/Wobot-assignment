@@ -1,0 +1,161 @@
+.App {
+  background-color: $primary-white;
+  min-height: 100vh;
+  padding: 94px 0 58px 0;
+
+  &_logo {
+    width: 16rem;
+    height: 3.6rem;
+    margin: 0 6rem;
+  }
+
+  &_home {
+    @include fc(1, 0);
+    border-radius: 1.5rem;
+    box-shadow: 4px 4px 20px rgba(157, 157, 157, 0.12);
+    flex-direction: column;
+    padding: 4rem 10rem 4rem 9rem;
+    margin: 0 auto;
+    width: 56rem;
+    background: $primary-white;
+
+    &_heading {
+      margin-bottom: 2.4rem;
+    }
+
+    &_content {
+      .header {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        .title {
+          font-size: 2.6rem;
+          font-weight: 500;
+          line-height: 3rem;
+          margin-bottom: 1.6rem;
+        }
+
+        .subTitle {
+          font-size: 1.4rem;
+          color: $primary-gray;
+          font-weight: 400;
+          line-height: 1.8rem;
+        }
+      }
+
+      .body {
+        width: 40rem;
+        margin: 0 auto;
+
+        .App-Input,
+        .App-SelectInput {
+          margin-top: 2.4rem;
+        }
+
+        .chipInput-container {
+          margin-top: 2.4rem;
+          margin-bottom: 5.6rem;
+          .options {
+            display: flex;
+            gap: 0.8rem;
+          }
+          // label
+
+          .chip-label {
+            font-weight: 500;
+            color: $tertiary-black;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
+
+      .header {
+        margin-bottom: 4rem;
+        .title {
+          text-align: center;
+        }
+      }
+    }
+
+    &_submit {
+      background-color: $primary-blue;
+      color: $primary-white;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.6rem;
+      width: 40rem;
+      padding: 1.4rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &_bg {
+    display: flex;
+    justify-content: space-between;
+
+    &_child-1 {
+      width: 400px;
+      border-top: 4px solid #3766e8;
+      height: 392.25px;
+      left: -117.75px;
+      top: 707.11px;
+      background: #f0f0f0;
+      opacity: 0.45;
+      transform: skewY(-30deg);
+      margin-top: -250px;
+    }
+    &_child-2 {
+      width: 385px;
+      border-bottom: 4px solid #3766e8;
+      height: 392.25px;
+      right: 117.75px;
+      top: 707.11px;
+      background: #f0f0f0;
+      opacity: 0.45;
+      transform: skewY(-30deg);
+      margin-top: -800px;
+    }
+  }
+}
+
+html {
+  @include down-query(600px) {
+    font-size: 7px;
+  }
+}
+
+@include down-query(1295px) {
+  .App {
+    &_bg {
+      display: flex;
+      justify-content: space-between;
+
+      &_child-1 {
+        width: 350px;
+        height: 392.25px;
+        left: -117.75px;
+        top: 707.11px;
+        margin-top: -200px;
+      }
+      &_child-2 {
+        width: 335px;
+        height: 392.25px;
+        right: 117.75px;
+        top: 707.11px;
+        margin-top: -700px;
+      }
+    }
+  }
+}
+
+@include down-query(1200px) {
+  .App {
+    background: $secondary-blue;
+    .rectangle {
+      visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/**
+ALL THE DEFAULT SETTINGS FOR THE APP, NO REAL STYLING SHOULD BE APPLIED HERE
+**/
+
+// #### IMPORTS ####
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+@mixin up-query($width) {
+  @media only screen and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin down-query($width) {
+  @media only screen and (max-width: #{$width}) {
+    @content;
+  }
+}
+
+// #### COLORS ####
+$primary-blue: #3766e8;
+$secondary-blue: #ccd7f3;
+
+$primary-black: #080b11;
+$secondary-black: #a0a0a0;
+$tertiary-black: #374258;
+$quaternary-black: #f0f0f0;
+
+$primary-gray: #545454;
+$secondary-gray: #b9c2d7;
+$tertiary-gray: #98a4ba;
+$quaternary-gray: #ced4da;
+$quinary-gray: #8b97b1;
+
+$primary-white: #fefffe;
+$tertiary-white: #f9f9fd;
+
+$primary-red: #e84450;
+
+// #### MISC VARIABLES ####
+$font-size: 10px;
+$primary-font: "Inter", sans-serif;

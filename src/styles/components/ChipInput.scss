@@ -1,0 +1,26 @@
+.App-ChipInput {
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: $primary-gray;
+  background: $quaternary-black;
+
+  &:hover {
+    outline: 1px solid $primary-blue;
+  }
+  &.active {
+    background: $primary-blue;
+    color: $primary-white;
+  }
+  &.error {
+    outline: 1px solid $primary-red;
+  }
+
+  .chip {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    height: 1.7rem;
+    box-sizing: content-box;
+    padding: 0.4rem 0.8rem;
+  }
+}
